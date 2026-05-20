@@ -19,7 +19,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat: scaffold api and ui packages`
 - [x] **T07**. Add root `README.md` (one-page: prerequisites, install, dev) and a `scripts/setup.sh` for first-time install.
     - Commit: `docs: add root README and setup script`
-- [ ] **T08**. Add GitHub Actions CI workflow: install, typecheck, lint, test on all packages.
+- [x] **T08**. Add GitHub Actions CI workflow: install, typecheck, lint, test on all packages.
     - File: `.github/workflows/ci.yml`
     - Commit: `ci: add typecheck, lint, and test workflow`
 
