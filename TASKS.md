@@ -47,7 +47,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(db): add book_resource RPC with rule enforcement and typed errors`
 - [x] **T19**. Migration `0011_cancel_and_override_rpcs.sql`: `cancel_booking()`, `override_booking()` (admin-only).
     - Commit: `feat(db): add cancel_booking and override_booking RPCs`
-- [ ] **T20**. SQL test suite (`supabase/tests/bookings.sql`): inserting overlap fails; cancelling frees the slot; activity-resource mismatch is rejected; booking outside opening hours is rejected. Use `pgtap` or a simple `do $$ begin … exception when … then … end $$;` harness.
+- [x] **T20**. SQL test suite (`supabase/tests/bookings.sql`): inserting overlap fails; cancelling frees the slot; activity-resource mismatch is rejected; booking outside opening hours is rejected. Use `pgtap` or a simple `do $$ begin … exception when … then … end $$;` harness.
     - Commit: `test(db): add SQL tests for booking constraints and RPC errors`
 - [ ] **T21**. Seed file `supabase/seed.sql`: one organization, one location with `Europe/Stockholm`, basic opening hours, several activities (volleyball, badminton, pickleball, basketball), resources, an admin profile.
     - Commit: `feat(db): add seed data for local development`

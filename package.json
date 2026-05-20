@@ -19,7 +19,8 @@
     "db:start": "npx supabase start",
     "db:stop": "npx supabase stop",
     "db:reset": "npx supabase db reset",
-    "db:types": "npx supabase gen types typescript --local > packages/types/src/db.generated.ts"
+    "db:types": "npx supabase gen types typescript --local > packages/types/src/db.generated.ts",
+    "db:test": "psql 'postgresql://postgres:postgres@127.0.0.1:54322/postgres' -v ON_ERROR_STOP=1 -f supabase/tests/bookings.sql"
   },
   "devDependencies": {
     "prettier": "^3.3.0",
