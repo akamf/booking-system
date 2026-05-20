@@ -738,7 +738,7 @@ export type Database = {
           p_activity_id: string
           p_ends_at: string
           p_notes?: string
-          p_on_behalf_of_user_id: string
+          p_on_behalf_of_user_id?: string
           p_override_reason: string
           p_resource_id: string
           p_starts_at: string
