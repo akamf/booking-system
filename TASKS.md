@@ -17,7 +17,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(domain): scaffold pure domain package with time helpers and tests`
 - [x] **T06**. Add `packages/api` and `packages/ui` skeletons (`package.json`, `tsconfig.json`, `index.ts` empty exports). Confirms workspace graph resolves.
     - Commit: `feat: scaffold api and ui packages`
-- [ ] **T07**. Add root `README.md` (one-page: prerequisites, install, dev) and a `scripts/setup.sh` for first-time install.
+- [x] **T07**. Add root `README.md` (one-page: prerequisites, install, dev) and a `scripts/setup.sh` for first-time install.
     - Commit: `docs: add root README and setup script`
 - [ ] **T08**. Add GitHub Actions CI workflow: install, typecheck, lint, test on all packages.
     - File: `.github/workflows/ci.yml`
