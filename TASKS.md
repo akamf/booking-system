@@ -39,7 +39,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(db): add opening_hours and blocked_times tables`
 - [x] **T15**. Migration `0007_bookings.sql`: `booking_status` enum; `bookings` table; the `EXCLUDE USING gist` constraint; `booking_participants` (composite PK).
     - Commit: `feat(db): add bookings with exclusion constraint preventing double-booking`
-- [ ] **T16**. Migration `0008_audit_log.sql`: `audit_log` table; a generic trigger function `tg_audit()`; attach triggers to `bookings`, `profiles`, `guardian_links`, `user_roles`, `blocked_times`, `opening_hours`, `activities`, `resources`.
+- [x] **T16**. Migration `0008_audit_log.sql`: `audit_log` table; a generic trigger function `tg_audit()`; attach triggers to `bookings`, `profiles`, `guardian_links`, `user_roles`, `blocked_times`, `opening_hours`, `activities`, `resources`.
     - Commit: `feat(db): add audit_log table and triggers on mutating tables`
 - [ ] **T17**. Migration `0009_rls_policies.sql`: enable RLS on all app tables; add SELECT/INSERT/UPDATE/DELETE policies per ARCHITECTURE.md §4. Deny direct writes to `bookings`.
     - Commit: `feat(db): add row level security policies for all app tables`
