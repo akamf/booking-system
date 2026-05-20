@@ -59,7 +59,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(domain): add availability slot computation with tests`
 - [x] **T25**. `packages/domain/booking-rules.ts`: rule functions returning `Violation | null` and `validateNewBooking()` that aggregates. Vitest covers each rule.
     - Commit: `feat(domain): add booking rule validators with tests`
-- [ ] **T26**. `packages/domain/permissions.ts`: `canBook`, `canCancel`, `canOverride`, `canManageResources`, `canActOnBehalfOf`. Vitest covers each.
+- [x] **T26**. `packages/domain/permissions.ts`: `canBook`, `canCancel`, `canOverride`, `canManageResources`, `canActOnBehalfOf`. Vitest covers each.
     - Commit: `feat(domain): add permission predicates with tests`
 
 ## Phase 2 — API package
