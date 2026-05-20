@@ -29,7 +29,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(db): initialize supabase project with required extensions`
 - [x] **T10**. Migration `0002_organizations_locations.sql`: `organizations`, `locations` (with `timezone` IANA text), with RLS scaffolding (default deny).
     - Commit: `feat(db): add organizations and locations tables`
-- [ ] **T11**. Migration `0003_roles_profiles.sql`: `profiles` (1:1 to `auth.users`, `display_name`, `birth_year`, `guardian_email`, `locale`, `deleted_at`), `roles` lookup, `user_roles`. Insert seed roles.
+- [x] **T11**. Migration `0003_roles_profiles.sql`: `profiles` (1:1 to `auth.users`, `display_name`, `birth_year`, `guardian_email`, `locale`, `deleted_at`), `roles` lookup, `user_roles`. Insert seed roles.
     - Commit: `feat(db): add profiles, roles, and user_roles tables`
 - [ ] **T12**. Migration `0004_guardian_links.sql`: `guardian_links` (composite PK, `verified_at`).
     - Commit: `feat(db): add guardian_links table for multi-guardian relationships`
