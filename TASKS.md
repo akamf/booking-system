@@ -75,7 +75,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 - [x] **T30**. `apps/web-admin`: `next@16` install, App Router, Tailwind, shadcn/ui init, base layout, ESLint extending shared config.
     - Commit: `feat(web-admin): scaffold next.js admin app with tailwind and shadcn`
-- [ ] **T31**. Auth: `(auth)/sign-in/page.tsx` with magic-link form; `middleware.ts` (Vercel Routing Middleware, Node runtime per ADR — uses `@supabase/ssr` to refresh session).
+- [x] **T31**. Auth: `(auth)/sign-in/page.tsx` with magic-link form; `middleware.ts` (Vercel Routing Middleware, Node runtime per ADR — uses `@supabase/ssr` to refresh session).
     - Commit: `feat(web-admin): add magic-link sign-in and session middleware`
 - [ ] **T32**. Admin shell: `(admin)/layout.tsx` with side nav, top bar, role-gated routes (non-admins bounced to a "no access" page).
     - Commit: `feat(web-admin): add admin layout with role-gated navigation`
