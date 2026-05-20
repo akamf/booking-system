@@ -9,7 +9,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 - [x] **T02**. Initialize git ignores, editorconfig, root `package.json`, `pnpm-workspace.yaml`, `turbo.json`.
     - Files: `.gitignore`, `.editorconfig`, `.nvmrc`, `package.json`, `pnpm-workspace.yaml`, `turbo.json`
     - Commit: `chore: initialize monorepo with pnpm and turborepo`
-- [ ] **T03**. Add `packages/config` with `tsconfig.base.json`, `eslint.config.mjs`, `prettier.config.cjs`, `tailwind.preset.ts`, and a `tokens.ts` (color/spacing/type design tokens).
+- [x] **T03**. Add `packages/config` with `tsconfig.base.json`, `eslint.config.mjs`, `prettier.config.cjs`, `tailwind.preset.ts`, and a `tokens.ts` (color/spacing/type design tokens).
     - Commit: `feat(config): add shared tsconfig, eslint, prettier, tailwind, and design tokens`
 - [ ] **T04**. Add `packages/types` with `package.json`, `tsconfig.json` extending base, and a placeholder Zod schema (`profile.ts`) to verify wiring.
     - Commit: `feat(types): scaffold shared Zod contracts package`

@@ -1,0 +1,30 @@
+{
+  "name": "@booking/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tsconfig/base": "./tsconfig/base.json",
+    "./tsconfig/library": "./tsconfig/library.json",
+    "./tsconfig/next": "./tsconfig/next.json",
+    "./tsconfig/expo": "./tsconfig/expo.json",
+    "./eslint": "./eslint.config.mjs",
+    "./prettier": "./prettier.config.cjs",
+    "./tailwind": "./tailwind.preset.ts",
+    "./tokens": "./src/tokens.ts"
+  },
+  "files": [
+    "tsconfig",
+    "eslint.config.mjs",
+    "prettier.config.cjs",
+    "tailwind.preset.ts",
+    "src"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "eslint": "^9.18.0",
+    "@eslint/js": "^9.18.0",
+    "typescript-eslint": "^8.20.0",
+    "eslint-config-prettier": "^10.0.0"
+  }
+}
