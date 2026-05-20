@@ -30,7 +30,8 @@ begin
   insert into auth.users (id, email, created_at, updated_at, aud, role, instance_id)
   values (v_user, format('%s@test.local', v_user), now(), now(), 'authenticated', 'authenticated', '00000000-0000-0000-0000-000000000000');
 
-  insert into public.organizations (id, name, slug) values (v_org, 'Test Org', 'test-org');
+  insert into public.organizations (id, name, slug)
+    values (v_org, 'Test Org', 'test-' || replace(v_org::text, '-', ''));
   insert into public.locations (id, organization_id, name, timezone)
     values (v_loc, v_org, 'Test Hall', 'Europe/Stockholm');
 
@@ -39,7 +40,7 @@ begin
     values (v_res, v_loc, v_type, 'Court 1');
 
   insert into public.activities (id, organization_id, name, slug, min_duration_minutes, default_duration_minutes, max_duration_minutes, cancellation_cutoff_minutes, self_book_min_age)
-    values (v_act, v_org, 'Test Activity', 'test-act', 30, 60, 180, 120, 13);
+    values (v_act, v_org, 'Test Activity', 'act-' || replace(v_act::text, '-', ''), 30, 60, 180, 120, 13);
 
   insert into public.activity_resource_compatibility (activity_id, resource_id)
     values (v_act, v_res);

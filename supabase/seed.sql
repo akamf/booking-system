@@ -28,6 +28,7 @@ on conflict (id) do nothing;
 do $$
 declare
   v_loc uuid := '00000000-0000-0000-0000-000000000010';
+  d     integer;
 begin
   for d in 1..5 loop
     insert into public.opening_hours (location_id, weekday, opens_at, closes_at)
@@ -37,7 +38,7 @@ begin
       where location_id = v_loc and weekday = d and opens_at = time '09:00' and closes_at = time '22:00'
     );
   end loop;
-  for d in array[0, 6] loop
+  foreach d in array array[0, 6] loop
     insert into public.opening_hours (location_id, weekday, opens_at, closes_at)
     select v_loc, d, time '09:00', time '20:00'
     where not exists (

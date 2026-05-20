@@ -51,7 +51,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `test(db): add SQL tests for booking constraints and RPC errors`
 - [x] **T21**. Seed file `supabase/seed.sql`: one organization, one location with `Europe/Stockholm`, basic opening hours, several activities (volleyball, badminton, pickleball, basketball), resources, an admin profile.
     - Commit: `feat(db): add seed data for local development`
-- [ ] **T22**. Generate types: add `pnpm db:types` script that runs `supabase gen types typescript --local > packages/types/src/db.generated.ts`. Run it and commit the generated file.
+- [x] **T22**. Generate types: add `pnpm db:types` script that runs `supabase gen types typescript --local > packages/types/src/db.generated.ts`. Run it and commit the generated file.
     - Commit: `chore(types): generate database types from local supabase schema`
 - [ ] **T23**. `packages/types`: hand-written Zod schemas mirroring DB row shapes for `Profile`, `Activity`, `Resource`, `Booking`, `GuardianLink`. `index.ts` re-exports schemas and inferred types.
     - Commit: `feat(types): add zod schemas for core domain entities`
