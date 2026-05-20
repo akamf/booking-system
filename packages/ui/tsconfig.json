@@ -1,0 +1,9 @@
+{
+  "extends": "@booking/config/tsconfig/base",
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*"]
+}

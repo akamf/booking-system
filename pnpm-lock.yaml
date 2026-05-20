@@ -30,6 +30,28 @@ importers:
         specifier: ^5.8.0
         version: 5.9.3
 
+  packages/api:
+    dependencies:
+      '@booking/domain':
+        specifier: workspace:*
+        version: link:../domain
+      '@booking/types':
+        specifier: workspace:*
+        version: link:../types
+      zod:
+        specifier: 'catalog:'
+        version: 3.25.76
+    devDependencies:
+      '@booking/config':
+        specifier: workspace:*
+        version: link:../config
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+      vitest:
+        specifier: 'catalog:'
+        version: 2.1.9(@types/node@22.19.19)
+
   packages/config:
     devDependencies:
       '@eslint/js':
@@ -78,6 +100,22 @@ importers:
       zod:
         specifier: 'catalog:'
         version: 3.25.76
+    devDependencies:
+      '@booking/config':
+        specifier: workspace:*
+        version: link:../config
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+      vitest:
+        specifier: 'catalog:'
+        version: 2.1.9(@types/node@22.19.19)
+
+  packages/ui:
+    dependencies:
+      '@booking/types':
+        specifier: workspace:*
+        version: link:../types
     devDependencies:
       '@booking/config':
         specifier: workspace:*
