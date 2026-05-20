@@ -25,7 +25,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 ## Phase 1 — Database & domain core
 
-- [ ] **T09**. Initialize Supabase locally (`supabase init`) and add `supabase/config.toml`. Add `supabase/migrations/0001_extensions.sql` enabling `btree_gist` and `pgcrypto`.
+- [x] **T09**. Initialize Supabase locally (`supabase init`) and add `supabase/config.toml`. Add `supabase/migrations/0001_extensions.sql` enabling `btree_gist` and `pgcrypto`.
     - Commit: `feat(db): initialize supabase project with required extensions`
 - [ ] **T10**. Migration `0002_organizations_locations.sql`: `organizations`, `locations` (with `timezone` IANA text), with RLS scaffolding (default deny).
     - Commit: `feat(db): add organizations and locations tables`
