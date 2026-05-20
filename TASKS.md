@@ -55,7 +55,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `chore(types): generate database types from local supabase schema`
 - [x] **T23**. `packages/types`: hand-written Zod schemas mirroring DB row shapes for `Profile`, `Activity`, `Resource`, `Booking`, `GuardianLink`. `index.ts` re-exports schemas and inferred types.
     - Commit: `feat(types): add zod schemas for core domain entities`
-- [ ] **T24**. `packages/domain/availability.ts`: pure `computeAvailableSlots()` and `findConflicts()` with vitest tests covering opening hours, blocked times, existing bookings, activity duration.
+- [x] **T24**. `packages/domain/availability.ts`: pure `computeAvailableSlots()` and `findConflicts()` with vitest tests covering opening hours, blocked times, existing bookings, activity duration.
     - Commit: `feat(domain): add availability slot computation with tests`
 - [ ] **T25**. `packages/domain/booking-rules.ts`: rule functions returning `Violation | null` and `validateNewBooking()` that aggregates. Vitest covers each rule.
     - Commit: `feat(domain): add booking rule validators with tests`
