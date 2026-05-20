@@ -53,7 +53,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(db): add seed data for local development`
 - [x] **T22**. Generate types: add `pnpm db:types` script that runs `supabase gen types typescript --local > packages/types/src/db.generated.ts`. Run it and commit the generated file.
     - Commit: `chore(types): generate database types from local supabase schema`
-- [ ] **T23**. `packages/types`: hand-written Zod schemas mirroring DB row shapes for `Profile`, `Activity`, `Resource`, `Booking`, `GuardianLink`. `index.ts` re-exports schemas and inferred types.
+- [x] **T23**. `packages/types`: hand-written Zod schemas mirroring DB row shapes for `Profile`, `Activity`, `Resource`, `Booking`, `GuardianLink`. `index.ts` re-exports schemas and inferred types.
     - Commit: `feat(types): add zod schemas for core domain entities`
 - [ ] **T24**. `packages/domain/availability.ts`: pure `computeAvailableSlots()` and `findConflicts()` with vitest tests covering opening hours, blocked times, existing bookings, activity duration.
     - Commit: `feat(domain): add availability slot computation with tests`
