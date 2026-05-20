@@ -79,7 +79,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(web-admin): add magic-link sign-in and session middleware`
 - [x] **T32**. Admin shell: `(admin)/layout.tsx` with side nav, top bar, role-gated routes (non-admins bounced to a "no access" page).
     - Commit: `feat(web-admin): add admin layout with role-gated navigation`
-- [ ] **T33**. Dashboard page: today's bookings count, upcoming load chart placeholder, recent audit entries.
+- [x] **T33**. Dashboard page: today's bookings count, upcoming load chart placeholder, recent audit entries.
     - Commit: `feat(web-admin): add dashboard page with bookings overview`
 - [ ] **T34**. Activities: list + create + edit pages with shadcn forms + Zod validation + Server Actions wrapping RPCs (admin-only).
     - Commit: `feat(web-admin): add activities management screens`
