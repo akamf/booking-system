@@ -1,0 +1,7 @@
+{
+  "extends": "@booking/config/tsconfig/base",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["src/**/*"]
+}

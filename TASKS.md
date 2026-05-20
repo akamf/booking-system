@@ -11,7 +11,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `chore: initialize monorepo with pnpm and turborepo`
 - [x] **T03**. Add `packages/config` with `tsconfig.base.json`, `eslint.config.mjs`, `prettier.config.cjs`, `tailwind.preset.ts`, and a `tokens.ts` (color/spacing/type design tokens).
     - Commit: `feat(config): add shared tsconfig, eslint, prettier, tailwind, and design tokens`
-- [ ] **T04**. Add `packages/types` with `package.json`, `tsconfig.json` extending base, and a placeholder Zod schema (`profile.ts`) to verify wiring.
+- [x] **T04**. Add `packages/types` with `package.json`, `tsconfig.json` extending base, and a placeholder Zod schema (`profile.ts`) to verify wiring.
     - Commit: `feat(types): scaffold shared Zod contracts package`
 - [ ] **T05**. Add `packages/domain` with `package.json`, `tsconfig.json`, and `time.ts` (a thin wrapper around `date-fns-tz` with a `formatInLocationTime` helper) + a vitest test.
     - Commit: `feat(domain): scaffold pure domain package with time helpers and tests`
