@@ -66,7 +66,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 - [x] **T27**. `packages/api/client/web.ts` and `client/mobile.ts`: typed Supabase client factories. Web uses `@supabase/ssr` (cookie-based); mobile uses `@supabase/supabase-js` with `expo-secure-store` adapter.
     - Commit: `feat(api): add typed supabase client factories for web and mobile`
-- [ ] **T28**. `packages/api/hooks/`: TanStack Query hooks for `useActivities`, `useResources`, `useAvailability`, `useBookings`, `useProfile`. Each hook is typed with Zod-parsed responses.
+- [x] **T28**. `packages/api/hooks/`: TanStack Query hooks for `useActivities`, `useResources`, `useAvailability`, `useBookings`, `useProfile`. Each hook is typed with Zod-parsed responses.
     - Commit: `feat(api): add typed react-query hooks for read endpoints`
 - [ ] **T29**. `packages/api/mutations/`: `useBookResource`, `useCancelBooking`, `useOverrideBooking`. Each maps known RPC error codes to typed client errors and triggers query invalidation.
     - Commit: `feat(api): add typed mutations for booking RPCs with error mapping`
