@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.next/
+.turbo/
+out/
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+Thumbs.db
+
+# Expo
+.expo/
+.expo-shared/
+expo-env.d.ts
+ios/Pods/
+ios/build/
+android/build/
+android/app/build/
+android/.gradle/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Next / Vercel
+.vercel/
+
+# Supabase
+supabase/.branches/
+supabase/.temp/
+
+# Generated (committed but tooling shouldn't auto-stage)
+# (we DO commit packages/types/src/db.generated.ts — see ADR-0004)

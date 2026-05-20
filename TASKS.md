@@ -6,7 +6,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 - [x] **T01**. Add planning docs (`PLAN.md`, `ARCHITECTURE.md`, `DECISIONS.md`, `TASKS.md`).
     - Commit: `docs: add planning documents (architecture, decisions, tasks)`
-- [ ] **T02**. Initialize git ignores, editorconfig, root `package.json`, `pnpm-workspace.yaml`, `turbo.json`.
+- [x] **T02**. Initialize git ignores, editorconfig, root `package.json`, `pnpm-workspace.yaml`, `turbo.json`.
     - Files: `.gitignore`, `.editorconfig`, `.nvmrc`, `package.json`, `pnpm-workspace.yaml`, `turbo.json`
     - Commit: `chore: initialize monorepo with pnpm and turborepo`
 - [ ] **T03**. Add `packages/config` with `tsconfig.base.json`, `eslint.config.mjs`, `prettier.config.cjs`, `tailwind.preset.ts`, and a `tokens.ts` (color/spacing/type design tokens).

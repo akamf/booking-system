@@ -1,0 +1,10 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+# Pin engine-strict-style behavior to keep the workspace honest.
+# Future-proofing for catalogs of pinned versions across packages.
+catalog:
+  typescript: ^5.8.0
+  zod: ^3.23.0
+  vitest: ^2.1.0

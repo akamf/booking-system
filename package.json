@@ -1,0 +1,29 @@
+{
+  "name": "booking-system",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Booking platform for a youth-focused activity center.",
+  "packageManager": "pnpm@10.28.1",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:start": "npx supabase start",
+    "db:stop": "npx supabase stop",
+    "db:reset": "npx supabase db reset",
+    "db:types": "npx supabase gen types typescript --local > packages/types/src/db.generated.ts"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.0"
+  }
+}
