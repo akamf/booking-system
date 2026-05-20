@@ -68,7 +68,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(api): add typed supabase client factories for web and mobile`
 - [x] **T28**. `packages/api/hooks/`: TanStack Query hooks for `useActivities`, `useResources`, `useAvailability`, `useBookings`, `useProfile`. Each hook is typed with Zod-parsed responses.
     - Commit: `feat(api): add typed react-query hooks for read endpoints`
-- [ ] **T29**. `packages/api/mutations/`: `useBookResource`, `useCancelBooking`, `useOverrideBooking`. Each maps known RPC error codes to typed client errors and triggers query invalidation.
+- [x] **T29**. `packages/api/mutations/`: `useBookResource`, `useCancelBooking`, `useOverrideBooking`. Each maps known RPC error codes to typed client errors and triggers query invalidation.
     - Commit: `feat(api): add typed mutations for booking RPCs with error mapping`
 
 ## Phase 3 — Web admin
