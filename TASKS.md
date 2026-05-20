@@ -33,7 +33,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(db): add profiles, roles, and user_roles tables`
 - [x] **T12**. Migration `0004_guardian_links.sql`: `guardian_links` (composite PK, `verified_at`).
     - Commit: `feat(db): add guardian_links table for multi-guardian relationships`
-- [ ] **T13**. Migration `0005_activities_resources.sql`: `activities`, `resource_types`, `resources`, `activity_resource_compatibility`.
+- [x] **T13**. Migration `0005_activities_resources.sql`: `activities`, `resource_types`, `resources`, `activity_resource_compatibility`.
     - Commit: `feat(db): add activities, resources, and compatibility tables`
 - [ ] **T14**. Migration `0006_opening_hours_blocked_times.sql`: `opening_hours` (weekday + time), `blocked_times` (range, location-or-resource).
     - Commit: `feat(db): add opening_hours and blocked_times tables`
