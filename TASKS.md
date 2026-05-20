@@ -13,7 +13,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(config): add shared tsconfig, eslint, prettier, tailwind, and design tokens`
 - [x] **T04**. Add `packages/types` with `package.json`, `tsconfig.json` extending base, and a placeholder Zod schema (`profile.ts`) to verify wiring.
     - Commit: `feat(types): scaffold shared Zod contracts package`
-- [ ] **T05**. Add `packages/domain` with `package.json`, `tsconfig.json`, and `time.ts` (a thin wrapper around `date-fns-tz` with a `formatInLocationTime` helper) + a vitest test.
+- [x] **T05**. Add `packages/domain` with `package.json`, `tsconfig.json`, and `time.ts` (a thin wrapper around `date-fns-tz` with a `formatInLocationTime` helper) + a vitest test.
     - Commit: `feat(domain): scaffold pure domain package with time helpers and tests`
 - [ ] **T06**. Add `packages/api` and `packages/ui` skeletons (`package.json`, `tsconfig.json`, `index.ts` empty exports). Confirms workspace graph resolves.
     - Commit: `feat: scaffold api and ui packages`
