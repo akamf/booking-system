@@ -126,5 +126,5 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 - [x] **T51**. Update `DECISIONS.md` with any ADRs added during implementation; final pass on `ARCHITECTURE.md`.
     - Commit: `docs: finalize architecture and decisions`
-- [ ] **T52**. Remove `PLAN.md`. Verify all tasks above are `[x]`.
+- [x] **T52**. Remove `PLAN.md`. Verify all tasks above are `[x]`.
     - Commit: `chore: complete implementation plan`
