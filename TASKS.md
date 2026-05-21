@@ -108,7 +108,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(mobile): add discover and availability screens`
 - [x] **T45**. Booking modal: slot confirmation, on-behalf-of selector for guardians, submit → success / error mapping.
     - Commit: `feat(mobile): add booking flow with guardian on-behalf-of`
-- [ ] **T46**. Bookings tab: upcoming + past sections; detail screen with cancel action.
+- [x] **T46**. Bookings tab: upcoming + past sections; detail screen with cancel action.
     - Commit: `feat(mobile): add bookings list and cancel flow`
 - [ ] **T47**. Profile tab: display name + birth year edit, locale, guardian-linked minors switcher.
     - Commit: `feat(mobile): add profile screen with guardian context switcher`
