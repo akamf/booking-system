@@ -100,9 +100,9 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(mobile): scaffold expo app with strict typescript and expo router`
 - [x] **T41**. Auth: `(auth)/sign-in.tsx` with email magic-link entry; `(auth)/verify.tsx` deep-link handler.
     - Commit: `feat(mobile): add magic-link sign-in and deep-link verification`
-- [ ] **T42**. Tabs layout: `(tabs)/_layout.tsx` with Home, Discover, Bookings, Profile tabs.
+- [x] **T42**. Tabs layout: `(tabs)/_layout.tsx` with Home, Discover, Bookings, Profile tabs.
     - Commit: `feat(mobile): add bottom-tab navigation`
-- [ ] **T43**. Home tab: today's bookings, "Book again" quick actions.
+- [x] **T43**. Home tab: today's bookings, "Book again" quick actions.
     - Commit: `feat(mobile): add home tab with today's bookings`
 - [ ] **T44**. Discover tab: activities list → activity detail with date picker → resources with availability slots.
     - Commit: `feat(mobile): add discover and availability screens`
