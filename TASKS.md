@@ -119,7 +119,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `docs: add per-app readmes`
 - [x] **T49**. Verification pass: `pnpm typecheck && pnpm lint && pnpm test` all green. Manual smoke notes in `docs/smoke.md`.
     - Commit: `docs: add manual smoke test checklist`
-- [ ] **T50**. Add `apps/web-public` scaffold (Next.js shell that says "coming soon"). Verifies the workspace graph and Vercel build wiring.
+- [x] **T50**. Add `apps/web-public` scaffold (Next.js shell that says "coming soon"). Verifies the workspace graph and Vercel build wiring.
     - Commit: `feat(web-public): add scaffold for future public site`
 
 ## Phase 6 — Wrap
