@@ -104,7 +104,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(mobile): add bottom-tab navigation`
 - [x] **T43**. Home tab: today's bookings, "Book again" quick actions.
     - Commit: `feat(mobile): add home tab with today's bookings`
-- [ ] **T44**. Discover tab: activities list → activity detail with date picker → resources with availability slots.
+- [x] **T44**. Discover tab: activities list → activity detail with date picker → resources with availability slots.
     - Commit: `feat(mobile): add discover and availability screens`
 - [ ] **T45**. Booking modal: slot confirmation, on-behalf-of selector for guardians, submit → success / error mapping.
     - Commit: `feat(mobile): add booking flow with guardian on-behalf-of`
