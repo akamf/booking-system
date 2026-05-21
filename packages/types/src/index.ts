@@ -6,3 +6,5 @@ export * from './resource';
 export * from './activity';
 export * from './booking';
 export * from './audit';
+
+export type { Database } from './db.generated';

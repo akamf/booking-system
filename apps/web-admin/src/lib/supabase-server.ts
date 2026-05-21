@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers';
 import { createServerClient, type CookieOptions } from '@supabase/ssr';
-import type { Database } from '@booking/api';
+import type { Database } from '@booking/types';
 import { serverEnv } from './env';
 
 /**
