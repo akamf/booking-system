@@ -274,10 +274,12 @@ book_resource() additionally:
 ### Admin overrides
 
 ```
-Admin uses the web-admin "create booking" form, which calls
-book_resource() with an explicit override flag (RLS-checked: admin only).
-Bypasses cutoff/role checks but still subject to the exclusion constraint
-(no admin can double-book). The audit log records the override.
+Staff/admin call override_book_resource() (a separate SECURITY DEFINER
+RPC, granted only to authenticated and gated on current_user_is_staff()).
+It bypasses past-time, duration, age, guardian-required, opening-hours
+and blocked-times checks; never bypasses the exclusion constraint,
+compatibility, or basic range validity. override_reason is required and
+captured in both the row and the audit log.
 ```
 
 ## 8. Mobile navigation structure
@@ -352,8 +354,8 @@ Things the architecture explicitly accommodates:
 |---|---|---|
 | Package manager | pnpm | Fast, strict, workspace-native |
 | Build orchestration | Turborepo | Incremental builds, Vercel-native |
-| Mobile | Expo SDK (managed) + React Native | EAS handles native builds; Expo Router matches our file-based instinct |
-| Web framework | Next.js 16 (App Router) | Server Components, Cache Components, deployable to Vercel zero-config |
+| Mobile | Expo SDK 52 + React Native 0.76 | EAS handles native builds; Expo Router matches our file-based instinct |
+| Web framework | Next.js 15 (App Router) | Server Components, deployable to Vercel zero-config. Pinned to 15 in v1 (`middleware.ts`); upgrade to 16 (`proxy.ts`) is a follow-up via the next-upgrade codemods. |
 | Web UI | Tailwind + shadcn/ui | Copy-in components, no vendor lock-in |
 | Backend | Supabase | Postgres + Auth + RLS in one box; we own the SQL |
 | Validation | Zod | Single source of truth for shape across client/server |

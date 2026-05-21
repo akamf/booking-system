@@ -307,3 +307,51 @@ DB-generated row types come from `supabase gen types typescript` into `packages/
 - `// @ts-ignore` and `// @ts-expect-error` require an accompanying issue link.
 
 **Rationale.** The cost of strict types compounds in the right direction. Loose types compound in the wrong one.
+
+---
+
+## ADR-0016 — Pin Next.js 15 and React 18 across the workspace
+
+**Status:** Accepted (revises ADR-0008)
+
+**Context.** ADR-0008 selected "Next.js 16 / App Router." At implementation time, the practical landscape was:
+
+- Next.js 16's Cache Components story is still maturing and would have us tracking ongoing migration guidance.
+- React 19's TS types collide with React 18's in mixed-version workspaces; Expo SDK 52's RN 0.76 line stays on React 18.3 for runtime parity, and we want **one** React major across web and mobile.
+- The middleware → proxy rename in Next 16 is a clean codemod when we're ready.
+
+**Decision.** v1 ships with:
+
+- Next.js 15 (App Router) for both `apps/web-admin` and `apps/web-public`. File is `middleware.ts`.
+- React 18.3 across web + mobile.
+- `@types/react` aligned to 18 in every workspace package.
+
+**Rationale.** A single React major makes the type graph honest. Next 15 is stable, Vercel-supported, and indistinguishable from Next 16 for our feature surface. The upgrade is a small task on its own when 16 settles.
+
+---
+
+## ADR-0017 — Localize the supabase-js TS narrowing collapse in one helper
+
+**Status:** Accepted
+
+**Context.** The combination of `@supabase/ssr` 0.5, `@supabase/supabase-js` 2.106, and our strict TS config produces a chain where `Relation['Insert']` on `.from().insert()` collapses to `any` even though the SupabaseClient is correctly typed against the generated `Database`. The runtime is correct; only the inferred payload type is broken. Investigation showed the regression sits inside Postgrest-js's `RejectExcessProperties<Relation extends { Insert: unknown } ? …>` generic, which we cannot fix without forking.
+
+**Decision.** Introduce `apps/web-admin/src/lib/typed-table.ts` with `insertRow`, `updateRow`, and `deleteWhere` helpers. They take the client as `unknown` (the typing we lose) and the payload as `Insert<T>` / `Update<T>` derived from the generated `Database`. Call sites stay typed against the row shape; the cast lives in one file.
+
+**Rationale.** The alternative is `as never` (or worse) scattered across every Server Action. One quarantined file is much better than fifty.
+
+**Migration plan.** When the underlying versions land a fix, delete `typed-table.ts` and inline the typed calls. The change is grep-friendly.
+
+---
+
+## ADR-0018 — Local-dev password sign-in for `@sportshallen.local` accounts
+
+**Status:** Accepted
+
+**Context.** v1 production auth is email magic links via Supabase. But during development we want a one-click sign-in for the seed admin so contributors don't have to spin up an SMTP listener.
+
+**Decision.** The sign-in form in both `apps/web-admin` and `apps/mobile` checks the entered email's suffix. If it ends in `@sportshallen.local`, the client calls `signInWithPassword` with the seed password (`admin1234`). Otherwise it uses `signInWithOtp`.
+
+**Rationale.** The suffix is impossible to match in production (no real domain owns it; we don't issue emails on it). The fast path is purely local-dev ergonomics. The seed user only exists in `supabase/seed.sql`, which doesn't run against production environments.
+
+**Rejected.** A `?dev=1` query-param or hidden env flag — easier to leak; harder for a new dev to discover when sign-in mysteriously requires a magic link.
