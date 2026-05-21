@@ -98,14 +98,27 @@ on conflict do nothing;
 -- Admin user (local development only — magic-link auth in real envs).
 -- Auth password is 'admin1234' for convenience.
 -- ---------------------------------------------------------------------------
-insert into auth.users (id, instance_id, aud, role, email, encrypted_password, email_confirmed_at, created_at, updated_at)
+-- GoTrue rejects rows with NULL token columns or NULL meta-data — it does
+-- string comparisons on them during sign-in (`Database error querying
+-- schema` is the surfaced error). All optional fields must be empty
+-- strings or empty JSONB literals, not NULL.
+insert into auth.users (
+  id, instance_id, aud, role, email, encrypted_password,
+  email_confirmed_at, created_at, updated_at,
+  raw_app_meta_data, raw_user_meta_data,
+  confirmation_token, recovery_token,
+  email_change_token_new, email_change
+)
 values (
   '00000000-0000-0000-0000-000000000300',
   '00000000-0000-0000-0000-000000000000',
   'authenticated', 'authenticated',
   'admin@sportshallen.local',
   crypt('admin1234', gen_salt('bf')),
-  now(), now(), now()
+  now(), now(), now(),
+  '{"provider":"email","providers":["email"]}'::jsonb,
+  '{}'::jsonb,
+  '', '', '', ''
 )
 on conflict (id) do nothing;
 
