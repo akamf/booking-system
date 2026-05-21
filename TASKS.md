@@ -83,7 +83,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(web-admin): add dashboard page with bookings overview`
 - [x] **T34**. Activities: list + create + edit pages with shadcn forms + Zod validation + Server Actions wrapping RPCs (admin-only).
     - Commit: `feat(web-admin): add activities management screens`
-- [ ] **T35**. Resources: list + create + edit pages, including the activity compatibility matrix editor.
+- [x] **T35**. Resources: list + create + edit pages, including the activity compatibility matrix editor.
     - Commit: `feat(web-admin): add resources management with compatibility matrix`
 - [ ] **T36**. Opening hours + blocked times management pages.
     - Commit: `feat(web-admin): add opening hours and blocked times management`

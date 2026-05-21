@@ -35,11 +35,29 @@ interface AnyClient {
 export async function insertRow<T extends TableName>(
   client: unknown,
   table: T,
-  values: Insert<T>,
+  values: Insert<T> | Insert<T>[],
 ): Promise<void> {
   const c = client as AnyClient;
   const { error } = await c.from(table).insert(values);
   if (error) throw new Error(error.message);
+}
+
+export async function deleteWhere<T extends TableName>(
+  client: unknown,
+  table: T,
+  conditions: Record<string, string>,
+): Promise<void> {
+  type EqChain = {
+    eq: (col: string, val: string) => EqChain;
+    then: Promise<{ error: { message: string } | null }>['then'];
+  };
+  const c = client as { from: (t: string) => { delete: () => EqChain } };
+  let q = c.from(table).delete();
+  for (const [col, val] of Object.entries(conditions)) {
+    q = q.eq(col, val);
+  }
+  const result = (await (q as unknown as Promise<{ error: { message: string } | null }>));
+  if (result.error) throw new Error(result.error.message);
 }
 
 export async function updateRow<T extends TableName>(
