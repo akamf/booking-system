@@ -354,7 +354,7 @@ Things the architecture explicitly accommodates:
 |---|---|---|
 | Package manager | pnpm | Fast, strict, workspace-native |
 | Build orchestration | Turborepo | Incremental builds, Vercel-native |
-| Mobile | Expo SDK 52 + React Native 0.76 | EAS handles native builds; Expo Router matches our file-based instinct |
+| Mobile | Expo SDK 54 + React Native 0.81 | EAS handles native builds; Expo Router 6 matches our file-based instinct |
 | Web framework | Next.js 15 (App Router) | Server Components, deployable to Vercel zero-config. Pinned to 15 in v1 (`middleware.ts`); upgrade to 16 (`proxy.ts`) is a follow-up via the next-upgrade codemods. |
 | Web UI | Tailwind + shadcn/ui | Copy-in components, no vendor lock-in |
 | Backend | Supabase | Postgres + Auth + RLS in one box; we own the SQL |

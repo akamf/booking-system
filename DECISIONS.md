@@ -310,23 +310,25 @@ DB-generated row types come from `supabase gen types typescript` into `packages/
 
 ---
 
-## ADR-0016 — Pin Next.js 15 and React 18 across the workspace
+## ADR-0016 — Pin Next.js 15 and React 19 across the workspace
 
-**Status:** Accepted (revises ADR-0008)
+**Status:** Accepted (revises ADR-0008; supersedes the earlier React-18 pin)
 
-**Context.** ADR-0008 selected "Next.js 16 / App Router." At implementation time, the practical landscape was:
+**Context.** ADR-0008 selected "Next.js 16 / App Router." At implementation time, the practical landscape settled as:
 
-- Next.js 16's Cache Components story is still maturing and would have us tracking ongoing migration guidance.
-- React 19's TS types collide with React 18's in mixed-version workspaces; Expo SDK 52's RN 0.76 line stays on React 18.3 for runtime parity, and we want **one** React major across web and mobile.
+- Next.js 16's Cache Components story is still maturing — Next 15 is the safer v1.
+- Expo SDK 54 ships React Native 0.81 with **React 19.1** as a hard peer. The earlier attempt to pin React 18 (which paired with Expo SDK 52 / RN 0.76) only made sense in a world where mobile was on React 18. Upgrading to SDK 54 flipped that constraint: now React 19 is the single major that satisfies both surfaces.
 - The middleware → proxy rename in Next 16 is a clean codemod when we're ready.
 
 **Decision.** v1 ships with:
 
 - Next.js 15 (App Router) for both `apps/web-admin` and `apps/web-public`. File is `middleware.ts`.
-- React 18.3 across web + mobile.
-- `@types/react` aligned to 18 in every workspace package.
+- React 19.1 across web + mobile (both apps' `react`/`react-dom`, plus `@types/react`).
+- Workspace-root `pnpm.overrides` pin `react`, `react-dom`, `@types/react`, and `@types/react-dom` to ~19.1 so transitive deps cannot re-introduce a second major.
 
-**Rationale.** A single React major makes the type graph honest. Next 15 is stable, Vercel-supported, and indistinguishable from Next 16 for our feature surface. The upgrade is a small task on its own when 16 settles.
+**Rationale.** One React major makes the type graph honest. SDK 54's peer requirements drove the upgrade; the workspace-wide override prevents future drift. Next 15 stays for the same reasons as before — the upgrade to 16 is a small task when 16 settles.
+
+**Implementation note.** Next 15 with React 19 also nudged us to disable `experimental.typedRoutes` in `next.config.mjs`: the typed-routes generic can't represent our dynamic `?next=…` redirect strings without a `Route` cast at every call site. Re-enable once the admin route surface stabilizes.
 
 ---
 

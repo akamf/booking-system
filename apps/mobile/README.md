@@ -27,8 +27,8 @@ Sign in with `admin@sportshallen.local` to use the seed-admin password fast path
 
 ## Stack
 
-- Expo SDK 52 + React Native 0.76 (new architecture enabled)
-- Expo Router (file-based)
+- Expo SDK 54 + React Native 0.81 (new architecture enabled by default)
+- Expo Router 6 (file-based)
 - TypeScript strict (extends `@booking/config/tsconfig/expo`)
 - React Query for server state
 - `@booking/api` for typed Supabase clients
