@@ -117,7 +117,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 - [x] **T48**. README per app: `apps/web-admin/README.md`, `apps/mobile/README.md`. Local dev steps end-to-end.
     - Commit: `docs: add per-app readmes`
-- [ ] **T49**. Verification pass: `pnpm typecheck && pnpm lint && pnpm test` all green. Manual smoke notes in `docs/smoke.md`.
+- [x] **T49**. Verification pass: `pnpm typecheck && pnpm lint && pnpm test` all green. Manual smoke notes in `docs/smoke.md`.
     - Commit: `docs: add manual smoke test checklist`
 - [ ] **T50**. Add `apps/web-public` scaffold (Next.js shell that says "coming soon"). Verifies the workspace graph and Vercel build wiring.
     - Commit: `feat(web-public): add scaffold for future public site`
