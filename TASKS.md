@@ -98,7 +98,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 - [x] **T40**. `apps/mobile`: Expo SDK 53 init with TypeScript template; Expo Router; install `@booking/api`, `@booking/types`, `@booking/domain`; configure strict tsconfig.
     - Commit: `feat(mobile): scaffold expo app with strict typescript and expo router`
-- [ ] **T41**. Auth: `(auth)/sign-in.tsx` with email magic-link entry; `(auth)/verify.tsx` deep-link handler.
+- [x] **T41**. Auth: `(auth)/sign-in.tsx` with email magic-link entry; `(auth)/verify.tsx` deep-link handler.
     - Commit: `feat(mobile): add magic-link sign-in and deep-link verification`
 - [ ] **T42**. Tabs layout: `(tabs)/_layout.tsx` with Home, Discover, Bookings, Profile tabs.
     - Commit: `feat(mobile): add bottom-tab navigation`
