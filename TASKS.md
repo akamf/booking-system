@@ -115,7 +115,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
 
 ## Phase 5 — Hardening & docs
 
-- [ ] **T48**. README per app: `apps/web-admin/README.md`, `apps/mobile/README.md`. Local dev steps end-to-end.
+- [x] **T48**. README per app: `apps/web-admin/README.md`, `apps/mobile/README.md`. Local dev steps end-to-end.
     - Commit: `docs: add per-app readmes`
 - [ ] **T49**. Verification pass: `pnpm typecheck && pnpm lint && pnpm test` all green. Manual smoke notes in `docs/smoke.md`.
     - Commit: `docs: add manual smoke test checklist`
