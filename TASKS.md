@@ -89,7 +89,7 @@ One commit per task. Conventional commit messages. Flip `[ ]` to `[x]` only afte
     - Commit: `feat(web-admin): add opening hours and blocked times management`
 - [x] **T37**. Bookings calendar view + list filter + detail page with cancel/override actions.
     - Commit: `feat(web-admin): add bookings calendar, list, and detail screens`
-- [ ] **T38**. Users search page (search-only by display name or email; never lists all minors without a filter) + detail page with role assignment and guardian-link management.
+- [x] **T38**. Users search page (search-only by display name or email; never lists all minors without a filter) + detail page with role assignment and guardian-link management.
     - Commit: `feat(web-admin): add user search and role/guardian management`
 - [ ] **T39**. Audit log viewer with table-name and date-range filters; row diff shown as before/after JSON.
     - Commit: `feat(web-admin): add audit log viewer`
